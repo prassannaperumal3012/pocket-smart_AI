@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}
+Party Budget Planner
+{% endblock %}
+
+{% block content %}
+
+<section class="page-head">
+
+    <span class="eyebrow">
+        PLANNER 02
+    </span>
+
+    <h1>
+        Party Budget Planner
+    </h1>
+
+    <p>
+        Balance food, venue, decoration,
+        entertainment, and contingency.
+    </p>
+
+</section>
+
+
+<form
+    class="planner-form card"
+    id="party-form"
+>
+
+    <div class="form-grid">
+
+        <label>
+
+            Total budget (₹)
+
+            <input
+                type="number"
+                name="budget"
+                min="1"
+                required
+                value="75000"
+            >
+
+        </label>
+
+
+        <label>
+
+            Guests
+
+            <input
+                type="number"
+                name="guests"
+                min="1"
+                required
+                value="40"
+            >
+
+        </label>
+
+
+        <label>
+
+            Event type
+
+            <input
+                name="event_type"
+                value="birthday"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            City
+
+            <input
+                name="city"
+                placeholder="Chennai"
+            >
+
+        </label>
+
+
+        <label>
+
+            Venue preference
+
+            <input
+                name="venue"
+                placeholder="Restaurant / home / hall"
+            >
+
+        </label>
+
+
+        <label>
+
+            Food preference
+
+            <input
+                name="food_preference"
+                placeholder="Vegetarian, buffet…"
+            >
+
+        </label>
+
+
+        <label>
+
+            Decoration style
+
+            <input
+                name="decoration_style"
+                placeholder="Minimal, floral…"
+            >
+
+        </label>
+
+    </div>
+
+
+    <label>
+
+        Priorities
+
+        <textarea
+            name="priorities"
+            rows="3"
+            placeholder="Keep food quality high, child-friendly, simple decor…"
+        ></textarea>
+
+    </label>
+
+
+    <button
+        class="button"
+        type="submit"
+    >
+        Generate Party Plan
+    </button>
+
+</form>
+
+
+<div
+    id="result"
+    class="results"
+></div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindPartyPlanner();
+</script>
+
+{% endblock %}

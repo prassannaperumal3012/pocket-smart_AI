@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        {% block title %}
+        PocketSmart AI
+        {% endblock %}
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="nav">
+
+    <a
+        class="brand"
+        href="/"
+    >
+        PocketSmart AI
+    </a>
+
+    <nav>
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/planner/home">
+            Home Planner
+        </a>
+
+        <a href="/planner/party">
+            Party Planner
+        </a>
+
+        <a href="/planner/jewelry">
+            Jewelry Planner
+        </a>
+
+        {% if user %}
+
+        <a href="/dashboard">
+            Dashboard
+        </a>
+
+        <button
+            class="link-button"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+        {% else %}
+
+        <a href="/login">
+            Login
+        </a>
+
+        <a
+            class="nav-cta"
+            href="/register"
+        >
+            Get Started
+        </a>
+
+        {% endif %}
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+
+<footer class="footer">
+
+    PocketSmart AI ·
+    Budget-aware recommendations ·
+    Demo catalog links are not live price feeds.
+
+</footer>
+
+
+<script src="/static/js/app.js"></script>
+
+{% block scripts %}
+{% endblock %}
+
+</body>
+
+</html>

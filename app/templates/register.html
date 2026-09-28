@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}
+Register — PocketSmart AI
+{% endblock %}
+
+{% block content %}
+
+<div class="auth-card">
+
+    <h1>
+        Create your account
+    </h1>
+
+    <p>
+        Your plans are saved to
+        your local database.
+    </p>
+
+
+    <form id="register-form">
+
+        <label>
+
+            Name
+
+            <input
+                name="name"
+                required
+                minlength="2"
+            >
+
+        </label>
+
+
+        <label>
+
+            Email
+
+            <input
+                type="email"
+                name="email"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Password
+
+            <input
+                type="password"
+                name="password"
+                required
+                minlength="8"
+            >
+
+        </label>
+
+
+        <button
+            class="button"
+            type="submit"
+        >
+            Register
+        </button>
+
+
+        <div
+            id="form-error"
+            class="error"
+        ></div>
+
+    </form>
+
+
+    <p class="muted">
+
+        Already registered?
+
+        <a href="/login">
+            Login
+        </a>
+
+    </p>
+
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindRegister();
+</script>
+
+{% endblock %}

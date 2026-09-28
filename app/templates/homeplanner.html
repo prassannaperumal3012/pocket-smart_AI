@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Interior Planner
+{% endblock %}
+
+{% block content %}
+
+<section class="page-head">
+
+    <span class="eyebrow">
+        PLANNER 01
+    </span>
+
+    <h1>
+        Home Interior Budget Planner
+    </h1>
+
+    <p>
+        Tell us what you want to furnish
+        and we'll allocate the budget.
+    </p>
+
+</section>
+
+
+<form
+    class="planner-form card"
+    id="home-form"
+>
+
+    <div class="form-grid">
+
+        <label>
+
+            Total budget (₹)
+
+            <input
+                type="number"
+                name="budget"
+                min="1"
+                required
+                value="50000"
+            >
+
+        </label>
+
+
+        <label>
+
+            Style
+
+            <input
+                name="style"
+                value="modern"
+            >
+
+        </label>
+
+
+        <label>
+
+            City
+
+            <input
+                name="city"
+                placeholder="Chennai"
+            >
+
+        </label>
+
+
+        <label>
+
+            Rooms, comma-separated
+
+            <input
+                name="rooms"
+                value="Living Room, Bedroom"
+            >
+
+        </label>
+
+    </div>
+
+
+    <label>
+
+        Items — one per line:
+        category | quantity | notes
+
+        <textarea
+            name="items"
+            rows="5"
+        >sofa | 1 | 3-seater
+lighting | 3 | warm white
+wall art | 2 | minimalist</textarea>
+
+    </label>
+
+
+    <label>
+
+        Priorities
+
+        <textarea
+            name="priorities"
+            rows="3"
+            placeholder="Easy maintenance, compact furniture, neutral colors…"
+        ></textarea>
+
+    </label>
+
+
+    <button
+        class="button"
+        type="submit"
+    >
+        Generate Home Plan
+    </button>
+
+</form>
+
+
+<div
+    id="result"
+    class="results"
+></div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindHomePlanner();
+</script>
+
+{% endblock %}

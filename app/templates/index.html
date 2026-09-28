@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}
+PocketSmart AI — Smart Budget Assistant
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <span class="eyebrow">
+            GENAI BUDGET ASSISTANT
+        </span>
+
+        <h1>
+            Plan smarter.
+            Spend with purpose.
+        </h1>
+
+        <p>
+            Turn a budget, preferences, and optional
+            outfit image into structured plans for
+            home interiors, parties, and jewelry.
+        </p>
+
+        <div class="actions">
+
+            <a
+                class="button"
+                href="/register"
+            >
+                Create account
+            </a>
+
+            <a
+                class="button secondary"
+                href="/planner/home"
+            >
+                Explore planners
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="mini-label">
+            Example
+        </div>
+
+        <strong>
+            ₹50,000 Home Plan
+        </strong>
+
+        <div class="progress">
+
+            <span
+                style="width:82%"
+            ></span>
+
+        </div>
+
+        <small>
+            Furniture · Lighting · Decor · Storage
+        </small>
+
+    </div>
+
+</section>
+
+
+<section class="grid three">
+
+    <a
+        class="card feature"
+        href="/planner/home"
+    >
+
+        <span>🏠</span>
+
+        <h2>
+            Home Interior
+        </h2>
+
+        <p>
+            Allocate your budget across rooms,
+            furniture, lighting, decor, and storage.
+        </p>
+
+    </a>
+
+
+    <a
+        class="card feature"
+        href="/planner/party"
+    >
+
+        <span>🎉</span>
+
+        <h2>
+            Party Planner
+        </h2>
+
+        <p>
+            Plan food, venue, decoration,
+            and contingency around guest count.
+        </p>
+
+    </a>
+
+
+    <a
+        class="card feature"
+        href="/planner/jewelry"
+    >
+
+        <span>💎</span>
+
+        <h2>
+            Jewelry Match
+        </h2>
+
+        <p>
+            Describe an occasion and outfit,
+            with an optional image.
+        </p>
+
+    </a>
+
+</section>
+
+{% endblock %}

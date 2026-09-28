@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard — PocketSmart AI
+{% endblock %}
+
+{% block content %}
+
+<section class="page-head">
+
+    <div>
+
+        <span class="eyebrow">
+            YOUR WORKSPACE
+        </span>
+
+        <h1>
+            Dashboard
+        </h1>
+
+        <p>
+            Saved plans and recent
+            recommendation activity.
+        </p>
+
+    </div>
+
+</section>
+
+
+<div class="grid three">
+
+    <a
+        class="card feature"
+        href="/planner/home"
+    >
+
+        <h2>
+            🏠 New Home Plan
+        </h2>
+
+        <p>
+            Start a room-by-room budget.
+        </p>
+
+    </a>
+
+
+    <a
+        class="card feature"
+        href="/planner/party"
+    >
+
+        <h2>
+            🎉 New Party Plan
+        </h2>
+
+        <p>
+            Build a guest-aware event budget.
+        </p>
+
+    </a>
+
+
+    <a
+        class="card feature"
+        href="/planner/jewelry"
+    >
+
+        <h2>
+            💎 New Jewelry Plan
+        </h2>
+
+        <p>
+            Match jewelry to an occasion.
+        </p>
+
+    </a>
+
+</div>
+
+
+<section class="card">
+
+    <div class="section-title">
+
+        <h2>
+            Recommendation History
+        </h2>
+
+        <button
+            class="button secondary"
+            onclick="loadHistory()"
+        >
+            Refresh
+        </button>
+
+    </div>
+
+
+    <div id="history">
+
+        <p class="muted">
+            Loading…
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    loadHistory();
+</script>
+
+{% endblock %}

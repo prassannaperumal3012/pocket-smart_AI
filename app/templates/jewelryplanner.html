@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jewelry Budget Planner
+{% endblock %}
+
+{% block content %}
+
+<section class="page-head">
+
+    <span class="eyebrow">
+        PLANNER 03
+    </span>
+
+    <h1>
+        Jewelry Budget Planner
+    </h1>
+
+    <p>
+        Add an optional outfit image
+        for multimodal style analysis.
+    </p>
+
+</section>
+
+
+<form
+    class="planner-form card"
+    id="jewelry-form"
+>
+
+    <div class="form-grid">
+
+        <label>
+
+            Budget (₹)
+
+            <input
+                type="number"
+                name="budget"
+                min="1"
+                required
+                value="10000"
+            >
+
+        </label>
+
+
+        <label>
+
+            Occasion
+
+            <input
+                name="occasion"
+                value="wedding guest"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Style
+
+            <input
+                name="style"
+                value="elegant"
+            >
+
+        </label>
+
+
+        <label>
+
+            Metal preference
+
+            <input
+                name="metal"
+                placeholder="Gold-tone, silver…"
+            >
+
+        </label>
+
+
+        <label>
+
+            City
+
+            <input
+                name="city"
+                placeholder="Chennai"
+            >
+
+        </label>
+
+    </div>
+
+
+    <label>
+
+        Outfit description
+
+        <textarea
+            name="outfit_description"
+            rows="3"
+            placeholder="Saree in emerald green with gold border…"
+        ></textarea>
+
+    </label>
+
+
+    <label>
+
+        Optional outfit image
+
+        <input
+            type="file"
+            name="image"
+            accept="image/*"
+        >
+
+    </label>
+
+
+    <button
+        class="button"
+        type="submit"
+    >
+        Generate Jewelry Plan
+    </button>
+
+</form>
+
+
+<div
+    id="result"
+    class="results"
+></div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindJewelryPlanner();
+</script>
+
+{% endblock %}
