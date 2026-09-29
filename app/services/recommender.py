@@ -44,7 +44,6 @@ def _generate_with_gemini(
         model=settings.gemini_model,
         contents=contents,
         config=gemini_types.GenerateContentConfig(
-            temperature=0.4,
             max_output_tokens=3000,
             response_mime_type="application/json",
             response_schema=RecommendationResponse,
@@ -333,12 +332,11 @@ def generate_recommendation(
             image,
         )
 
-    except Exception as exc:
+    except Exception:
 
-        logger.exception(
-            "Gemini request failed; "
-            "using fallback: %s",
-            exc,
+        logger.info(
+            "Gemini is unavailable; "
+            "serving the local fallback recommendation."
         )
 
         return _fallback(

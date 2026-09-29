@@ -1,6 +1,8 @@
 from pathlib import Path
 from importlib import import_module
 
+# cspell:ignore homeplanner partyplanner jewelryplanner
+
 from app.db import SessionLocal
 
 User = import_module("app.models.user").User
