@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PocketSmart AI
 
 PocketSmart AI is a complete FastAPI + Jinja2 + SQLite
@@ -79,3 +80,6 @@ PocketSmartAI/
 ├── requirements.txt
 ├── pyproject.toml
 └── README.md
+=======
+# pocket-smart_AI
+>>>>>>> b3c215cb2f3bad1122339e42275c6f4a160f144e
